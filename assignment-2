@@ -1,0 +1,28 @@
+#include <stdio.h>
+void swap(int a, int b);
+void swap1(int *a, int*b);
+int main() 
+{
+    int a, b;
+    printf("enter a ,b values");
+    scanf("%d%d",&a,&b);
+printf("before swap of a, b values%d\t%d",a,b);
+swap(a, b);
+swap(&a, &b);
+printf("after swap of a, b values%d\t%d\n",a,b);
+    return 0;
+}
+void swap(int a,int b)
+{
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("the value of a=%d\t b=%d\n",a,b);
+}
+void swap1(int *a, int *b)
+{
+    *a=*a+*b;
+    *b=*a-*b;
+    *a=*a-*b;
+    printf("the value of a=%d\t b=%d\n",*a,*b);
+}
